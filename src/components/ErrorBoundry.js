@@ -8,18 +8,20 @@ class ErrorBoundry extends Component{
     }
   }
 
+  static getDerivedStateFromError(error){
+    return { hasError: true};
+  }
+
   componentDidCatch(error, info){
-    this.setState({
-      hasError: true
-    });
+    console.log(info.componentStack);
   }
 
   render(){
       if(this.state.hasError){
         return <h1>Uppss... error</h1>
-      }else{
-        return this.props.children;
       }
+
+      return this.props.children;
   }
 }
 

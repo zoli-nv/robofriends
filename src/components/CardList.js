@@ -1,14 +1,12 @@
 import React from 'react';
 import Card from './Card';
 
-class CardList extends React.Component{
-
-  render(){ 
+const CardList = (props) => {
 
     return(
         <div>
           {
-            this.props.robots.map((user) => {
+            props.robots.map((user) => {
               return (
                     <Card key={user.id}
                         id={user.id} 
@@ -19,7 +17,7 @@ class CardList extends React.Component{
           }
         </div>
       );
-  }
+
 }
 
 export default CardList;

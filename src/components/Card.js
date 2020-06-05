@@ -1,9 +1,8 @@
 import React from 'react';
 
-class Card extends React.Component {
+const Card = (props) => {
 
-  render(){
-    const {id, name, email} = this.props;
+    const {id, name, email} = props;
 
     return(
       <div className='tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow5'>
@@ -14,7 +13,7 @@ class Card extends React.Component {
         </div>
       </div>
     );
-  }
+
 }
 
 export default Card;
