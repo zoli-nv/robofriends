@@ -5,10 +5,6 @@ class CardList extends React.Component{
 
   render(){ 
 
-    if(true){
-      throw new Error('Unexpected error');
-    }
-
     return(
         <div>
           {
